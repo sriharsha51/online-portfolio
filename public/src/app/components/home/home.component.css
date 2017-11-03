@@ -1,0 +1,180 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.box-container {
+  position: relative;
+  display: flex;
+}
+
+img {
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+#animation-text {
+  position: absolute;
+  bottom: 20%;
+  left: 40%;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+  top: -100px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Lobster', cursive;
+  padding: 20px;
+}
+
+button {
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Media Queries*/
+
+@media screen and (max-width:420px) {
+  #animation-text {
+    position: absolute;
+    bottom: 60%;
+    left: 40%;
+    margin-bottom: 10vw;
+    text-align: center;
+  }
+  h1 {
+    padding: 0px;
+    font-size: 7vw;
+  }
+  h2 {
+    padding: 0px;
+    font-size: 5vw;
+  }
+  button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width:550px) {
+  #animation-text {
+    position: absolute;
+    bottom: 50%;
+    left: 40%;
+    margin-bottom: 10vw;
+    text-align: center;
+  }
+  h1 {
+    padding: 0px;
+    font-size: 7vw;
+  }
+  h2 {
+    padding: 0px;
+    font-size: 5vw;
+  }
+  button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 4vw;
+  }
+}
+
+
+@media screen and (min-width: 550px) and (max-width:1024px) {
+  #animation-text {
+    position: absolute;
+    bottom: 30%;
+    left: 40%;
+    margin-bottom: 10vw;
+    text-align: center;
+  }
+  h1 {
+    padding: 0px;
+    font-size: 7vw;
+  }
+  h2 {
+    padding: 0px;
+    font-size: 5vw;
+  }
+  button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 4vw;
+  }
+}
+
+
+/* Animation styles */
+
+h1 {
+  animation: top-drop 1s ease forwards;
+}
+
+@keyframes top-drop {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0
+  }
+  80% {
+    transform: translateY(10px)
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1
+  }
+}
+
+h2 {
+  animation: right-drop 2s ease forwards;
+}
+
+@keyframes right-drop {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+button {
+  animation: bottom-drop 3s ease forwards;
+}
+
+@keyframes bottom-drop {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+img {
+  animation: opacify 5s ease forwards;
+}
+
+@keyframes opacify {
+  0% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0.3
+  }
+}

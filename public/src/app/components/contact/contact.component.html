@@ -1,0 +1,87 @@
+<div class="container-fluid">
+  <h2>
+    <strong>CONTACT</strong>
+  </h2>
+  <div class="row contact-info">
+    <div class="col-xs-8 col-sm-8 col-md-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+      <div class="home">
+        <h3>
+          <i class="fa fa-home fa-3x home-icon" aria-hidden="true"></i>CURRENT LOCATION</h3>
+        <h4>FAIRFAX, VIRGINIA, UNITED STATES</h4>
+      </div>
+      <div class="contact-no">
+        <h3>
+          <i class="fa fa-mobile fa-4x contact-no-icon" aria-hidden="true"></i>PHONE</h3>
+        <h4>+1845-309-3297</h4>
+      </div>
+      <div class="email">
+        <h3>
+          <i class="fa fa-envelope-o fa-2x email-icon" aria-hidden="true"></i>EMAIL</h3>
+        <h4>sriharsha.alu@gmail.com</h4>
+      </div>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 social">
+      <a href="https://github.com/sriharsha51">
+        <i class="fa fa-github fa-4x" aria-hidden="true"></i>
+      </a>
+      <br>
+      <a href="https://www.facebook.com/sriharshaa1993">
+        <i class="fa fa-facebook-official fa-4x" aria-hidden="true"></i>
+      </a>
+      <br>
+      <a href="https://www.linkedin.com/in/sriharsha-a-61943a151/">
+        <i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i>
+      </a>
+      <br>
+      <a href="https://twitter.com/sriharshaALU?lang=en">
+        <i class="fa fa-twitter fa-4x" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div class="col-sm-8 col-md-4 col-sm-offset-1 col-md-offset-0">
+      <div class="show-hide-message">
+        <div [ngClass]="messageClass">
+          {{ message }}
+        </div>
+      </div>
+      <form [formGroup]="form" (submit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <div [ngClass]="{'has-error':(form.controls.name.errors && form.controls.name.dirty), 'has-success':form.controls.name.valid}">
+            <input type="text" name="name" class="form-control" autocomplete="off" placeholder="*name" formControlName="name" />
+            <ul class="help-block">
+              <li *ngIf="form.controls['name'].errors?.required && form.controls['name'].dirty">This field is required</li>
+              <li *ngIf="form.controls['name'].errors?.minlength || form.controls['name'].errors?.maxlength">Minimum characters: 3, Maximum characters: 15</li>
+              <li *ngIf="form.controls['name'].errors?.validatename && form.controls['name'].dirty">name must not contain any special characters</li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <div [ngClass]="{'has-error':(form.controls.email.errors && form.controls.email.dirty), 'has-success':form.controls.email.valid}">
+            <input type="text" name="email" class="form-control" autocomplete="off" placeholder="*E-mail" formControlName="email" />
+            <ul class="help-block">
+              <li *ngIf="form.controls['email'].errors?.required && form.controls['email'].dirty">This field is required</li>
+              <li *ngIf="(form.controls['email'].errors?.minlength || form.controls['email'].errors?.maxlength) && form.controls['email'].dirty">Minimum characters: 5, Maximum characters: 50</li>
+              <li *ngIf="form.controls['email'].errors?.validateEmail && form.controls['email'].dirty">This must be a valid email</li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <div [ngClass]="{'has-success': form.controls.message.valid, 
+            'has-error': form.controls.message.dirty && form.controls.message.errors}">
+            <textarea name="name" rows="8" cols="95" placeholder="*message" class="form-control" formControlName="message"></textarea>
+            <ul class="help-block">
+              <li *ngIf="form.controls.message.dirty && form.controls.message.errors?.required">This field is required.</li>
+              <li *ngIf="(form.controls.message.dirty && form.controls.message.errors?.minlength) || 
+                (form.controls.message.dirty && form.controls.message.errors?.maxlength)">Minimum length:5 and Max length:500</li>
+            </ul>
+          </div>
+        </div>
+        <button [disabled]="!form.valid" type="submit" class=" btn btn-lg btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

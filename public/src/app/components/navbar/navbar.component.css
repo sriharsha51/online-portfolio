@@ -1,0 +1,13 @@
+.navbar-brand {
+    font-family: 'Lobster', cursive;
+    font-size: 1.7em;
+}
+.navbar {
+    background:linear-gradient(140deg, rgb(142, 203, 223), rgb(247, 217, 134));
+    font-weight: bold;
+    margin: 0;
+}
+.navbar-right {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+}

@@ -1,0 +1,78 @@
+.box-container {
+  background: rgb(77, 201, 238);
+}
+
+h2 {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.inner-container {
+  display: flex;
+  text-align: justify;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.box {
+  padding: 20px;
+}
+
+.box1 {
+  flex: 3;
+  flex-basis: 300px;
+}
+
+.box2 {
+  flex: 1;
+  align-self: center;
+  text-align: center;
+  flex-basis: 150px;
+}
+
+.box3 {
+  flex: 3;
+  flex-basis: 300px;
+}
+
+img {
+  height: 90%;
+  width: 80%;
+  margin-top: 40px;
+}
+
+@media screen and (max-width:500px) {
+  .box2 {
+    flex: 1 1 70%;
+    align-self: center;
+    text-align: center;
+  } /* image is in box2 */
+}
+
+h3 {
+  text-align: center;
+  padding-top: 20px;
+  margin: 0px 20px 30px 20px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.skills {
+  display: flex;
+}
+
+.list {
+  flex: 1 1;
+}
+
+p {
+  font-size: 1.4em;
+}
+
+ul {
+  font-size: 1.4em;
+}
+
