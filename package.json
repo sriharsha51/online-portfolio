@@ -4,7 +4,8 @@
   "description": "online-portfolio",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "build": "cd public && ng build --prod"
   },
   "keywords": [
     "online",
@@ -16,10 +17,13 @@
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",
-    "nodemailer": "^4.3.1",
-    "xoauth2": "^1.2.0"
+    "nodemailer": "^4.3.1"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
+  },
+  "engines": {
+    "node": "6.11.0",
+    "npm":"3.10.10"
   }
 }

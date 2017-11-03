@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class MessageService {
 
-  domain:string = "http://localhost:8080/";
+  domain:string = "";
 
   constructor(private http: Http) { }
 

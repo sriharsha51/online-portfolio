@@ -92,7 +92,7 @@ button {
 }
 
 
-@media screen and (min-width: 550px) and (max-width:1024px) {
+@media screen and (min-width: 550px) and (max-width:750px) {
   #animation-text {
     position: absolute;
     bottom: 30%;
