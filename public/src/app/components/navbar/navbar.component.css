@@ -6,6 +6,8 @@
     background:linear-gradient(140deg, rgb(142, 203, 223), rgb(247, 217, 134));
     font-weight: bold;
     margin: 0;
+    position: relative;
+    z-index: 1;
 }
 .navbar-right {
     font-family: 'Montserrat', sans-serif;
