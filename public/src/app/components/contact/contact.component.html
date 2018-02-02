@@ -64,7 +64,6 @@
               <li *ngIf="form.controls['email'].errors?.required && form.controls['email'].dirty">This field is required</li>
               <li *ngIf="(form.controls['email'].errors?.minlength || form.controls['email'].errors?.maxlength) && form.controls['email'].dirty">Minimum characters: 5, Maximum characters: 50</li>
               <li *ngIf="form.controls['email'].errors?.validateEmail && form.controls['email'].dirty">This must be a valid email</li>
-
             </ul>
           </div>
         </div>
